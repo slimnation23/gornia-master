@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Горня</title>
+    <link rel="shortcut icon" href="image/icon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+        <!-- Contacts -->
+        <div class="contactPage">
+            <div class="header">
+                <div class="header-left">
+                    <div class="icon-main">
+                        <img src="image/icon.svg" alt="icon" class="header-icon">
+                        <img src="image/icon2.svg" alt="icon2" class="header-icon2">
+                    </div>
+                    <div class="header-iconText">
+                        <p class="iconText1">кав'ярня</p>
+                        <p class="iconText2">ГОРНЯ</p>
+                    </div>
+                </div>
+
+                <div class="header-rightModal">
+                    <a href="index.html" class="modalButton">
+                        <img src="image/cross-delete-or-close-circular-button-interface-symbol.svg" alt="close" class="close">
+                    </a>
+                </div>
+            </div>
+
+            <div class="conctact-content">
+                <div id="map2" class="mapApi"></div>
+            
+                <div class="cofe-1">
+                    <h1 class="contacts-H1">Контакти</h1>
+        
+                    <p class="cofe-P1">вулиця, Тернопіль,<br>
+                            Тернопільська область, 46000
+                    </p>
+
+                    <p class="cofe-P1">Телефон: <b>098 000 00 00</b></p>
+
+                    <div class="contacts-item">
+                        <h1 class="contacts-item-h1">Графік роботи</h1>
+                        <div class="contacts-item-P1">
+                            <p class="contacts-item-p1">ПН-ПТ</p>
+                            <p class="contacts-item-p1 time">08:00-21:00</p>
+                        </div>
+                        <div class="contacts-item-P1">
+                            <p class="contacts-item-p1">СБ-НД</p>
+                            <p class="contacts-item-p1 time">09:00-21:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-cofe2">
+                <div class="sectionCofeButton">
+                    <div class="buttonBack">
+                        <a href="index.html" class="modalButtonAdapt"><img src="image/headerImg/headerAdapt.svg" alt="2" class="headerAdapt"></a>
+                    </div>
+                </div>
+                <h1 class="section-h1Next">Контакти</h1>
+                
+               <div class="cofe-1">
+                    <p class="cofe-P1">вулиця, Тернопіль,<br>
+                            Тернопільська область, 46000
+                    </p>
+
+                    <p class="cofe-P1">Телефон: <b>098 000 00 00</b></p>
+
+                    <div class="contacts-item">
+                        <h1 class="contacts-item-h1">Графік роботи</h1>
+                        <div class="contacts-item-P1">
+                            <p class="contacts-item-p1">ПН-ПТ</p>
+                            <p class="contacts-item-p1 time">08:00-21:00</p>
+                        </div>
+                        <div class="contacts-item-P1">
+                            <p class="contacts-item-p1">СБ-НД</p>
+                            <p class="contacts-item-p1 time">09:00-21:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="map3" class="mapApi2"></div>
+            </div>
+
+    
+    <!-- Maps -->
+    <script>
+            var map;
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map2'), {
+                center: {lat: 49.545645, lng: 25.605637},
+                zoom: 17,
+              });
+              var marker = new google.maps.Marker({
+                  position: {lat: 49.563351, lng: 25.605637},
+                  map: map
+              })
+            }
+
+            var map;
+            function initMap2() {
+              map = new google.maps.Map(document.getElementById('map3'), {
+                center: {lat: 49.563351, lng: 25.605637},
+                zoom: 17,
+              });
+              var marker = new google.maps.Marker({
+                  position: {lat: 49.563351, lng: 25.605637},
+                  map: map
+              })
+            }
+          </script>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzA9kcZWWeLm176qzKrwi_BxwEF_YYNzs&callback=initMap"
+    async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzA9kcZWWeLm176qzKrwi_BxwEF_YYNzs&callback=initMap2"
+    async defer></script>
+</body>
+</html>
